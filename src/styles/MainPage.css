@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap);
+* {
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 10em;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+p {
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  box-shadow: 0 0.1rem 0.125rem -0.1em gray;
+}
+nav .logo {
+  height: 50%;
+  align-self: center;
+  margin-right: 2.5em;
+}
+nav .logo:hover {
+  cursor: pointer;
+}
+nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  height: 100%;
+}
+nav .nav-right .avatar:hover {
+  cursor: pointer;
+}
+
+.avatar {
+  height: 50%;
+}
+
+.link-container {
+  display: flex;
+  gap: 2em;
+}
+
+.carousel {
+  width: 500px;
+}
+.carousel .carousel-main {
+  width: 100%;
+  margin-bottom: 2em;
+  border-radius: 1em;
+}
+.carousel .carousel-main:hover {
+  cursor: pointer;
+}
+.carousel .thumbnails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.carousel .thumbnails .thumb-img {
+  width: 20%;
+  border-radius: 0.5em;
+}
+.carousel .thumbnails .thumb-img:hover {
+  cursor: pointer;
+}
+.carousel .thumbnails .thumb-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+}
+.carousel .thumbnails .thumb-img img:hover {
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=MainPage.css.map */
