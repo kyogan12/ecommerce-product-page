@@ -10,6 +10,7 @@ body {
   padding-top: 0;
   padding-bottom: 0;
   background-color: hsl(0deg, 0%, 100%);
+  min-height: 100vh;
 }
 
 p {
@@ -30,10 +31,12 @@ nav .link-container {
 nav .link {
   display: flex;
   align-items: center;
+  color: hsl(219deg, 9%, 45%);
   height: 100%;
   margin: 0;
 }
 nav .link:hover {
+  color: black;
   cursor: pointer;
   border-bottom: 0.3em solid hsl(26deg, 100%, 55%);
   margin-bottom: -0.3em;
@@ -64,8 +67,16 @@ nav .nav-right img:hover {
   cursor: pointer;
 }
 
+.main-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  gap: 6%;
+}
+
 .carousel {
-  width: 500px;
+  width: 25%;
 }
 .carousel .carousel-main {
   width: 100%;
@@ -94,6 +105,88 @@ nav .nav-right img:hover {
 }
 .carousel .thumbnails .thumb-img img:hover {
   opacity: 0.7;
+}
+
+.info-cont {
+  width: 25%;
+}
+.info-cont .shoe-name {
+  color: hsl(220deg, 13%, 13%);
+  font-size: 2.2em;
+}
+.info-cont .discounted-price {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+.info-cont .old-price {
+  color: hsl(220deg, 14%, 75%);
+  margin: 0;
+  text-decoration: line-through;
+  margin-bottom: 1.5em;
+}
+.info-cont .company-details {
+  color: hsl(26deg, 100%, 55%);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+.info-cont .shoe-info {
+  color: hsl(219deg, 9%, 45%);
+}
+.info-cont .price-cont {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.info-cont .price-cont .discount-percentage {
+  font-weight: 700;
+  color: hsl(26deg, 100%, 55%);
+  padding: 0.3em;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-radius: 0.3em;
+  background-color: hsl(25deg, 100%, 94%);
+}
+
+.btn-container {
+  gap: 5%;
+  display: flex;
+  align-items: center;
+}
+.btn-container .amount {
+  width: 40%;
+  justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: hsl(223deg, 64%, 98%);
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+}
+.btn-container .amount img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.btn-container .add-btn {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  border-radius: 0.5em;
+  background-color: hsl(26deg, 100%, 55%);
+  color: white;
+  border: none;
+  height: 50px;
+  font-weight: 700;
+}
+.btn-container .add-btn:hover {
+  opacity: 0.5;
+}
+.btn-container .add-btn:hover {
+  cursor: pointer;
+}
+.btn-container .add-btn .logo {
+  height: 30%;
 }
 
 /*# sourceMappingURL=MainPage.css.map */

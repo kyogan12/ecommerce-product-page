@@ -2,6 +2,21 @@
 
 $font-main: 'Kumbh Sans', sans-serif
 $main: hsl(26, 100%, 55%)
+$dark-grey: hsl(219, 9%, 45%)
+$discount-price: hsl(25, 100%, 94%)
+$old-price: hsl(220, 14%, 75%)
+$button-container: hsl(223, 64%, 98%)
+
+@mixin flex()
+    display: flex
+    align-items: center
+
+@mixin button()
+    border: none
+    height: 50px
+    font-weight: 700
+    &:hover
+        cursor: pointer
 
 *
     box-sizing: border-box
@@ -13,6 +28,7 @@ body
     padding-top: 0
     padding-bottom: 0
     background-color: hsl(0, 0%, 100%)
+    min-height: 100vh
 
 p
     font-size: 16px
@@ -23,15 +39,15 @@ nav
     height: 100px
     box-shadow: 0 0.1rem 0.125rem -0.1em gray
     .link-container
-        display: flex
-        align-items: center
+        @include flex()
         gap: 2em
     .link
-        display: flex
-        align-items: center
+        @include flex()
+        color: $dark-grey
         height: 100%
         margin: 0
         &:hover
+            color: black
             cursor: pointer
             border-bottom: 0.3em solid $main
             margin-bottom: -0.3em
@@ -42,8 +58,7 @@ nav
         &:hover
             cursor: pointer
     .nav-right
-        display: flex
-        align-items: center
+        @include flex()
         gap: 3em
         height: 100%
         .avatar
@@ -57,8 +72,16 @@ nav
             &:hover
                 cursor: pointer
 
+//Carousel and buttons container
+.main-cont
+    @include flex()
+    justify-content: center
+    min-height: 85vh
+    gap: 6%
+
+//Image carousel
 .carousel
-    width: 500px
+    width: 25%
     .carousel-main
         width: 100%
         margin-bottom: 2em
@@ -80,3 +103,65 @@ nav
                 border-radius: 0.5em
                 &:hover
                     opacity: 0.7
+
+//General information about the product
+.info-cont
+    width: 25%
+    .shoe-name
+        color: hsl(220, 13%, 13%)
+        font-size: 2.2em
+    .discounted-price
+        margin-top: 0.1em
+        margin-bottom: 0.1em
+    .old-price
+        color: $old-price
+        margin: 0
+        text-decoration: line-through
+        margin-bottom: 1.5em
+    .company-details
+        color: $main
+        font-size: 14px
+        letter-spacing: 0.1em
+    .shoe-info
+        color: $dark-grey
+    .price-cont
+        @include flex()
+        gap: 20px
+        .discount-percentage
+            font-weight: 700
+            color: $main
+            padding: 0.3em
+            padding: 0.2em 0.5em 0.2em 0.5em
+            border-radius: 0.3em
+            background-color: $discount-price
+
+//Amount to buy and add to cart buttons
+.btn-container
+    gap: 5%
+    @include flex()
+    .amount
+        width: 40%
+        justify-content: space-between
+        padding-left: 1em
+        padding-right: 1em
+        background-color: $button-container
+        border-radius: 0.5em
+        @include flex()
+        img
+            &:hover
+                cursor: pointer
+                opacity: 0.5
+    .add-btn
+        @include flex()
+        width: 70%
+        flex-direction: row
+        justify-content: center
+        gap: 10%
+        border-radius: 0.5em
+        background-color: $main
+        color: white
+        &:hover
+            opacity: 0.5
+        @include button()
+        .logo
+            height: 30%
