@@ -18,13 +18,28 @@ p {
 
 nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   height: 100px;
   box-shadow: 0 0.1rem 0.125rem -0.1em gray;
 }
+nav .link-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+nav .link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+nav .link:hover {
+  cursor: pointer;
+  border-bottom: 0.3em solid hsl(26deg, 100%, 55%);
+  margin-bottom: -0.3em;
+}
 nav .logo {
-  height: 50%;
+  height: 25%;
   align-self: center;
   margin-right: 2.5em;
 }
@@ -37,17 +52,16 @@ nav .nav-right {
   gap: 3em;
   height: 100%;
 }
-nav .nav-right .avatar:hover {
-  cursor: pointer;
-}
-
-.avatar {
+nav .nav-right .avatar {
   height: 50%;
 }
-
-.link-container {
-  display: flex;
-  gap: 2em;
+nav .nav-right .avatar:hover {
+  outline: 0.2em hsl(26deg, 100%, 55%) solid;
+  outline-offset: -2px;
+  border-radius: 1.5em;
+}
+nav .nav-right img:hover {
+  cursor: pointer;
 }
 
 .carousel {

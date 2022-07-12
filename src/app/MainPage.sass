@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap)
 
 $font-main: 'Kumbh Sans', sans-serif
+$main: hsl(26, 100%, 55%)
 
 *
     box-sizing: border-box
@@ -18,13 +19,24 @@ p
 
 nav
     display: flex
-    align-items: center
     justify-content: space-between
     height: 100px
     box-shadow: 0 0.1rem 0.125rem -0.1em gray
-
+    .link-container
+        display: flex
+        align-items: center
+        gap: 2em
+    .link
+        display: flex
+        align-items: center
+        height: 100%
+        margin: 0
+        &:hover
+            cursor: pointer
+            border-bottom: 0.3em solid $main
+            margin-bottom: -0.3em
     .logo
-        height: 50%
+        height: 25%
         align-self: center
         margin-right: 2.5em
         &:hover
@@ -35,15 +47,15 @@ nav
         gap: 3em
         height: 100%
         .avatar
+            height: 50%
+            &:hover
+                outline: 0.2em $main solid
+
+                outline-offset: -2px
+                border-radius: 1.5em
+        img
             &:hover
                 cursor: pointer
-
-.avatar
-    height: 50%
-
-.link-container
-    display: flex
-    gap: 2em
 
 .carousel
     width: 500px

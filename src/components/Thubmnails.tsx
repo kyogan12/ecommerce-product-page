@@ -17,7 +17,10 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
   timer,
 }) => {
   return main === shoe.shoe ? (
-    <div style={{ outline: "0.2em orange solid" }} className="thumb-img">
+    <div
+      style={{ outline: "0.2em hsl(26, 100%, 55%) solid" }}
+      className="thumb-img"
+    >
       <img
         style={{ opacity: "0.5" }}
         onClick={() => setTimer((timer) => timer)}

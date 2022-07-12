@@ -6,7 +6,9 @@ export const Nav: React.FC = () => {
   return (
     <nav>
       <div className="link-container">
-        <img className="logo" src={Logo} alt="logo" />
+        <a href="/">
+          <img className="logo" src={Logo} alt="logo" />
+        </a>
         <p className="link">Collections</p>
         <p className="link">Men</p>
         <p className="link">Women</p>
@@ -14,7 +16,7 @@ export const Nav: React.FC = () => {
         <p className="link">Contact</p>
       </div>
       <div className="nav-right">
-        <img src={Cart} alt="cart" />
+        <img className="cart" src={Cart} alt="cart" />
         <img className="avatar" src={Avatar} alt="avatar" />
       </div>
     </nav>

@@ -11,8 +11,6 @@ export const Carousel: React.FC = () => {
     setMain(shoes[timer].shoe);
   }, [timer]);
 
-  console.log(shoes[4].shoe);
-
   return (
     <div className="carousel">
       <img
