@@ -37,7 +37,8 @@ nav
     display: flex
     justify-content: space-between
     height: 100px
-    box-shadow: 0 0.1rem 0.125rem -0.1em gray
+    box-shadow: 0 0.1rem 0.125rem -0.1em $dark-grey
+
     .link-container
         @include flex()
         gap: 2em
@@ -64,13 +65,91 @@ nav
         .avatar
             height: 50%
             &:hover
+                cursor: pointer
                 outline: 0.2em $main solid
 
                 outline-offset: -2px
                 border-radius: 1.5em
-        img
+        .cart
+            @include flex()
+        .cart-icon
             &:hover
                 cursor: pointer
+
+        .quantity
+            position: relative
+            top: -1em
+            left: -1em
+            justify-content: center
+            background-color: $main
+            border-radius: 1em
+            color: white
+            padding-left: 5px
+            padding-right: 5px
+            margin: 0
+            font-size: 10px
+            &:hover
+                cursor: pointer
+        .cart-items
+            display: grid
+            grid-template-rows: 20% 45%
+            position: relative
+            background-color: white
+            top: 8em
+            left: 10em
+            height: 12em
+            width: 19em
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            border-radius: 1em
+            animation: cart 500ms ease-in-out 1 forwards
+            .empty-cart
+                @include flex()
+                justify-content: center
+            .cart-items-p
+                font-weight: 700
+                padding-left: 20px
+                height: 100%
+                box-shadow: 0 0.1rem 0.125rem -0.1em $dark-grey
+            .inside-cart
+                margin-top: 10px
+                padding-left: 1em
+                gap: 5%
+                @include flex()
+                .bold-price
+                    color: black
+                *
+                    font-size: 14px
+                    margin: 0
+                    color: $dark-grey
+                img
+                    border-radius: 0.2em
+                    height: 55%
+                .bin
+                    height: 20%
+                    &:hover
+                        cursor: pointer
+            .checkout-cart
+                background: $main
+                padding: 10px
+                @include flex()
+                justify-self: center
+                justify-content: center
+                border-radius: 0.5em
+                height: 60%
+                width: 90%
+                color: white
+                font-weight: 700
+                &:hover
+                    cursor: pointer
+                    opacity: 0.7
+
+@keyframes cart
+    0%
+        opacity: 0
+        transform: translateY(-20%)
+    100%
+        opacity: 1
+        transform: translateY(0%)
 
 //Carousel and buttons container
 .main-cont
