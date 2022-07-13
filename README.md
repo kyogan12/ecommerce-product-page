@@ -7,3 +7,6 @@ Made with:
 - React
 - Typescript
 - SASS
+
+
+<a href="https://kyogan12.github.io/ecommerce-product-page/">Live preview of the finished product</a>
