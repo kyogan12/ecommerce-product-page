@@ -23,6 +23,9 @@ nav {
   height: 100px;
   box-shadow: 0 0.1rem 0.125rem -0.1em hsl(219deg, 9%, 45%);
 }
+nav .phone-menu {
+  display: none;
+}
 nav .link-container {
   display: flex;
   align-items: center;

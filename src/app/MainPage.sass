@@ -38,7 +38,8 @@ nav
     justify-content: space-between
     height: 100px
     box-shadow: 0 0.1rem 0.125rem -0.1em $dark-grey
-
+    .phone-menu
+        display: none
     .link-container
         @include flex()
         gap: 2em
@@ -67,7 +68,6 @@ nav
             &:hover
                 cursor: pointer
                 outline: 0.2em $main solid
-
                 outline-offset: -2px
                 border-radius: 1.5em
         .cart
