@@ -34,7 +34,7 @@ export const Nav: React.FC = () => {
           alt="phone-menu"
           className="phone-menu"
         />
-        <a href="/">
+        <a href="/ecommerce-product-page">
           <img className="logo" src={logo} alt="logo" />
         </a>
         <DashboardLinks />

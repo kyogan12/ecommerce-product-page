@@ -33,11 +33,7 @@ export const CartProvider = ({ children }: ShoppingCartProviderProps) => {
         return [...currItems, { quantity: num }];
       } else {
         return currItems.map((item) => {
-          if (item) {
-            return { ...item, quantity: item.quantity + num };
-          } else {
-            return item;
-          }
+          return { ...item, quantity: item.quantity + num };
         });
       }
     });
